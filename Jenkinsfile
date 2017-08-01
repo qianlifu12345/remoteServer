@@ -16,10 +16,7 @@ node {
 
 
   stage ('Compile Go files') {
-	sh 'pwd'
-	sh 'ls -la'
-	sh 'chmod +x Jenkinsbuild'
-    sh 'bash ./Jenkinsbuild build'
+    sh 'go build'
 
   }
 
