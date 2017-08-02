@@ -27,9 +27,15 @@ node {
 
   stage ('Compile Go files') {
    sh 'chmod +x build.sh'
-   sh './build.sh'
+   sh './build.sh build'
     
   }
+
+  stage ('Generate Docker Image') {
+   sh './build.sh docker'
+
+  }
+
 
 
 
