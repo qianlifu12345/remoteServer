@@ -1,0 +1,36 @@
+# 配置部署信息
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata: 
+  name: game
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: game
+    spec:
+      containers:
+      - name: game
+        image: reg.maizuo.com/yuwan/game:v1.4-29-gb66caa0
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8083
+        volumeMounts:
+        - mountPath: /data/logs
+          name: game-volume
+        command: ["/bin/sh","-c"] #自定义命令
+        args: ["nohup ./game -conf ./config/prod"]
+      volumes:
+      - hostPath:
+          path: /data/logs
+        name: game-volume
