@@ -26,7 +26,8 @@ node {
 
 
   stage ('Compile Go files') {
-    sh './build.sh'
+   sh 'chmod +x build.sh'
+   sh './build.sh'
     
   }
 
