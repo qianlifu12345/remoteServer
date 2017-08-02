@@ -6,6 +6,9 @@ export GOROOT="/usr/local/bin/go";
 env;
 echo $GOPATH;
 echo $GOROOT;
-docker login --username=bob --password=mAIZUOWANG3011 reg.miz.so
+echo ;
+echo ;
+echo "Start build";
+sudo docker login --username=bob --password=mAIZUOWANG3011 reg.miz.so
 bash ./autobuild.sh build;
 bash ./autobuild.sh docker;
