@@ -6,4 +6,4 @@ export GOROOT="/usr/local/bin/go";
 env;
 echo $GOPATH;
 echo $GOROOT;  
-go build;
+go build main.go;
