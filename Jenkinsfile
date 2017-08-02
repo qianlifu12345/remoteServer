@@ -28,8 +28,10 @@ node {
   stage ('Compile Go files') {
     sh 'pwd'
     sh 'ls -la'
-    sh 'bash echo $GOPATH'
-    sh 'bash echo $GOROOT'    
+    sh 'env'
+    sh 'bash $GOROOT' 
+    sh 'bash $GOPATH'
+    sh 'bash $GOROOT'    
     sh 'bash go build'
 
   }
