@@ -26,15 +26,14 @@ node {
 
 
   stage ('Compile Go files') {
-   sh 'chmod +x build.sh'
-   sh './build.sh build'
+   sh 'chmod +x autobuild.sh'
+   sh 'chmod +x jenkinsbuild.sh'
+   sh './jenkinsbuild.sh'
     
   }
 
-  stage ('Generate Docker Image') {
-   sh './build.sh docker'
 
-  }
+
 
 
 
