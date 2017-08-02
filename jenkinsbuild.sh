@@ -6,5 +6,5 @@ export GOROOT="/usr/local/bin/go";
 env;
 echo $GOPATH;
 echo $GOROOT;  
-./autobuild.sh build;
-./autobuild.sh docker;
+bash ./autobuild.sh build;
+bash ./autobuild.sh docker;
