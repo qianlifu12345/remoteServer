@@ -7,6 +7,15 @@ node {
     echo 'Preparing the build'
 
   }
+  
+  
+  stage ('test') {
+
+  
+   echo 'bob has changed 10.18'
+   sh 'date'
+
+  }
 
   stage ('Checkout') {
 
