@@ -26,19 +26,8 @@ node {
 
 
   stage ('Compile Go files') {
-    sh 'pwd'
-    sh 'ls -la'
+    sh './build.sh'
     
-    sh 'export PATH="$PATH:/usr/local/bin/go/bin"'
-    sh 'export GOPATH="/var/lib/jenkins/goworkspace"'
-    sh 'export GOROOT="/usr/local/bin/go"'
-
-    sh 'env'
-    sh 'bash $GOROOT' 
-    sh 'bash $GOPATH'
-    sh 'bash $GOROOT'    
-    sh 'bash go build'
-
   }
 
 
