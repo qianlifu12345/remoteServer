@@ -10,5 +10,5 @@ echo ;
 echo ;
 echo "Start build";
 sudo docker login --username=bob --password=mAIZUOWANG3011 reg.miz.so
-bash ./autobuild.sh build;
-bash ./autobuild.sh docker;
+sudo bash ./autobuild.sh build;
+sudo bash ./autobuild.sh docker;
