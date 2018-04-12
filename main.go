@@ -90,7 +90,7 @@ func PublicKeyFile(host string) ssh.AuthMethod {
 
 //GetPrivateKey from database
 func GetPrivateKey(ip string) string {
-	db, err := sql.Open("mysql", "newuser:newuser@tcp(54.255.142.1:3306)/?charset=utf8")
+	db, err := sql.Open("mysql", "newuser:newuser@tcp(127.0.0.1:3306)/?charset=utf8")
 	if err != nil {
 		log.Errorf("Error connecting to database: %v", err)
 	}
@@ -117,7 +117,7 @@ func GetPrivateKey(ip string) string {
 
 //GetShellScript get from database
 func GetShellScript(shellid string) string {
-	db, err := sql.Open("mysql", "newuser:newuser@tcp(54.255.142.1:3306)/?charset=utf8")
+	db, err := sql.Open("mysql", "newuser:newuser@tcp(127.0.0.1:3306)/?charset=utf8")
 	if err != nil {
 		log.Errorf("Error connecting to database: %v", err)
 	}
